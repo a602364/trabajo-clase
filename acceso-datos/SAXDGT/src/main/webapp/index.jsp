@@ -38,12 +38,17 @@
           </head>
 
           <body>
+           <div class="jumbotron jumbotron-fluid bg-dark text-white">
+        	<div class="mx-5">
+	            <h1 class="display-3">DGT Noticias</h1>
+	            <h3>Página con los registros de las incidencias en España</h3>
+	        	</div>
+    		</div>
             <div class="container">
-              <div class="jumbotron mt-3">
-                <h1 class="display-3">DGT Noticias</h1>
+              
                 
 
-              </div>
+             
 			
               <div class="row justify-content-center">
                 <div class="col-md-4 lg-3 my-3">
@@ -62,6 +67,7 @@
                 </div>
 
               </div>
+               </div>
               
 			<%
 			String ca = request.getParameter("ca");
@@ -73,25 +79,26 @@
 			<h2 class = "text-center">Incidencias en la comunidad de <%= cca[caint - 1] %></h2>
              <div class="row justify-content-center">
               <% for (Noticia noticia : noticias) {%>
-                <div class="col-md-4 lg-3 my-3 d-flex">
-                  
+                <div class="col-md-4 lg-3 my-3 d-flex">                  
                     <div class="card flex-fill">
                       <div class="card-body">
                         <h4 class="card-title"><%= noticia.getTitulo() %></h4>
                         <h5 class="card-title">El dia: <%= noticia.getFechaPub().substring(0,8) %> de <%= noticia.getFechaPub().substring(8,16) %></h5>
                         <p class="card-text"><%= noticia.getDescrip().replace("src='", "src='http://infocar.dgt.es/etraffic/") %></p>
                       </div>
-
-                    </div>
-
-                  
-
+                    </div>               
                 </div>
                 <%}%>
               </div>
               <%}%>
 
             </div>
+            
+            <footer class="mt-5">
+        	<div class="jumbotron-fluid bg-dark text-white text-center py-3">
+            	<h2>&copy;Dirección General de Tráfico</h2>
+        	</div>
+   			</footer>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
