@@ -1,13 +1,21 @@
 package model;
 
-import java.util.List;
-
 public class Apps {
-	private List<Juegos> juegos;
-
-	public List<Juegos> getJuegos() {
-		return juegos;
+	private Long appid;
+	private String name;
+	
+	public Long getAppid() {
+		return appid;
+	}
+	public String getName() {
+		return name;
+	}
+	
+	@Override
+	public String toString() {
+		return "Apps [appid=" + appid + ", name=" + name + "]";
 	}
 
+	
 	
 }

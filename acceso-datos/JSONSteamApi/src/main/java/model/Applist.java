@@ -1,10 +1,16 @@
 package model;
 
-public class Applist {
-	private Apps apps;
+import java.util.List;
 
-	public Apps getApps() {
+public class Applist {
+	private List<Apps> apps;
+
+	public List<Apps> getApps() {
 		return apps;
 	}
+	
+	
+
+	
 	
 }
