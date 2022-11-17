@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
                 }.show()
             }
         }).attachToRecyclerView(binding.cm.rvcarro)
-        
+
     }
 
     private fun initRV() {
